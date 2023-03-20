@@ -1,5 +1,8 @@
 import type { TeleText as TeleTextType } from "@/types/Yle.types";
 
-export const TeleText = (teleText: TeleTextType) => {
+type Props = {
+  teleText: TeleTextType
+}
+export const TeleText = ({ teleText }: Props) => {
   return <div>moi</div>
 }
