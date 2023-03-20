@@ -1,6 +1,9 @@
 # Neksti TV
 
-NextJS + teksti tv, funny
+NextJS + teksti tv
+
+![Vercel](https://vercelbadge.vercel.app/api/attlii/neksti-tv)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## Setup
 
