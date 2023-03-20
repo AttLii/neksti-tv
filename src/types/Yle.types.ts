@@ -28,24 +28,26 @@ type AllLine = {
   line: TextNode;
 };
 
-export type Teletext = {
-  teletext: {
-    network: string;
-    xml: string;
-    page: {
+export type TeleText = {
+  network: string;
+  xml: string;
+  page: {
+    number: string;
+    name: string;
+    time: string;
+    subpagecount: string;
+    nextpg?: string;
+    prevpg?: string;
+    toptype: "Block";
+    animated?: "yes";
+    subpage: {
       number: string;
-      name: string;
       time: string;
-      subpagecount: string;
-      nextpg?: string;
-      prevpg?: string;
-      toptype: "Block";
-      animated?: "yes";
-      subpage: {
-        number: string;
-        time: string;
-        content: (StructuredLine | TextLine | AllLine)[];
-      }[];
-    };
+      content: (StructuredLine | TextLine | AllLine)[];
+    }[];
   };
+};
+
+export type TeletextResponse = {
+  teletext: TeleText;
 };

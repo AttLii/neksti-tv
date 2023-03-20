@@ -1,4 +1,4 @@
-import { Teletext } from "@/types/Yle.types";
+import { TeletextResponse } from "@/types/Yle.types";
 
 export const YleApiClient = (appId: string, appKey: string) => {
   const urlParams = new URLSearchParams([
@@ -6,7 +6,7 @@ export const YleApiClient = (appId: string, appKey: string) => {
     ["app_key", appKey],
   ]);
   return {
-    getV1TeletextPage: (page: string): Promise<Teletext> =>
+    getV1TeletextPage: (page: string): Promise<TeletextResponse> =>
       fetch(
         `https://external.api.yle.fi/v1/teletext/pages/${page}.json?${urlParams.toString()}`
       ).then((r) => r.json()),

@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next"
 import { YleApiClient } from "@/repositories/Yle"
-import { Teletext } from "@/types/Yle.types"
+import { TeletextResponse } from "@/types/Yle.types"
+import { TeleText } from "@/components/TeleText"
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
   return {
@@ -9,7 +10,7 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
   }
 }
 
-export const getStaticProps: GetStaticProps<Teletext> = async (ctx) => {
+export const getStaticProps: GetStaticProps<TeletextResponse> = async (ctx) => {
   if (typeof ctx.params?.number !== "string") {
     return {
       notFound: true,
@@ -39,8 +40,6 @@ export const getStaticProps: GetStaticProps<Teletext> = async (ctx) => {
 
 export default function Home(props: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <pre className="text-3xl">
-      {JSON.stringify(props, null, 2)}
-    </pre>
+    <TeleText teleText={props.teletext} />
   )
 }
