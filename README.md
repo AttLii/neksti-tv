@@ -37,4 +37,3 @@ $ pnpm start
 - Index-page.
 - Animations
 - Support different types of content ("all", "text")
-- use link property to navigate to other pages (RunNode type)
