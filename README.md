@@ -3,7 +3,7 @@
 NextJS + teksti tv
 
 ![Vercel](https://vercelbadge.vercel.app/api/attlii/neksti-tv)
-![License](https://img.shields.io/badge/license-MIT-blue)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Setup
 

@@ -1,0 +1,38 @@
+// https://developer.yle.fi/en/api/index.html
+// color codes to tailwind classes
+export const fgColor = {
+  black: "text-black",
+  red: "text-red",
+  green: "text-green",
+  yellow: "text-yellow",
+  blue: "text-blue",
+  magenta: "text-purple",
+  cyan: "text-cyan",
+  white: "text-white",
+  gblack: "text-black",
+  gred: "text-red",
+  ggreen: "text-green",
+  gyellow: "text-yellow",
+  gblue: "text-blue",
+  gmagenta: "text-purple",
+  gcyan: "text-cyan",
+  gwhite: "text-white",
+};
+export const bgColor = {
+  black: "bg-black",
+  red: "bg-red-500",
+  green: "bg-green-500",
+  yellow: "bg-yellow-500",
+  blue: "bg-blue-500",
+  magenta: "bg-purple-500",
+  cyan: "bg-indigo-500",
+  white: "bg-white",
+  gblack: "bg-black",
+  gred: "bg-red-500",
+  ggreen: "bg-green-500",
+  gyellow: "bg-yellow-500",
+  gblue: "bg-blue-500",
+  gmagenta: "bg-purple-500",
+  gcyan: "bg-indigo-500",
+  gwhite: "bg-white",
+};
