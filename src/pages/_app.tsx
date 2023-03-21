@@ -6,7 +6,7 @@ const mode7Font = localFont({ src: '../../public/MODE7GX3.ttf', variable: "--mod
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${mode7Font.variable}`}>
+    <main className={`${mode7Font.variable} h-screen w-screen bg-black flex justify-center items-center`}>
       <Component {...pageProps} />
     </main>
   )
