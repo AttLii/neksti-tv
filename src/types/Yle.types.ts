@@ -1,11 +1,30 @@
-type Color = "black" | "white" | "blue"; // TODO Add more once we get there
-
-type RunNode = {
+export type Color =
+  | "black"
+  | "red"
+  | "green"
+  | "yellow"
+  | "blue"
+  | "magenta"
+  | "cyan"
+  | "white"
+  | "gblack"
+  | "gred"
+  | "ggreen"
+  | "gyellow"
+  | "gblue"
+  | "gmagenta"
+  | "gcyan"
+  | "gwhite";
+export type RunNode = {
   bg: Color;
   fg: Color;
   length: string;
   charcode?: string;
   Text?: string;
+};
+type StructuredLine = {
+  number: string;
+  run: RunNode[] | RunNode;
 };
 
 type TextNode = {
@@ -13,20 +32,22 @@ type TextNode = {
   Text?: string;
 };
 
-type StructuredLine = {
+export type StructuredContent = {
   type: "structured";
-  run: RunNode[];
+  line: StructuredLine[];
 };
 
-type TextLine = {
+type TextContent = {
   type: "text";
   line: TextNode;
 };
 
-type AllLine = {
+type AllContent = {
   type: "all";
   line: TextNode;
 };
+
+export type Content = StructuredContent | TextContent | AllContent;
 
 export type TeleText = {
   network: string;
@@ -43,7 +64,7 @@ export type TeleText = {
     subpage: {
       number: string;
       time: string;
-      content: (StructuredLine | TextLine | AllLine)[];
+      content: Content[];
     }[];
   };
 };
