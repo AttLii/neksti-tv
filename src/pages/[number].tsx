@@ -38,8 +38,8 @@ export const getStaticProps: GetStaticProps<TeletextResponse> = async (ctx) => {
   }
 }
 
-export default function Home(props: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home({ teletext }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <TeleText teleText={props.teletext} />
+    <TeleText teleText={teletext} />
   )
 }

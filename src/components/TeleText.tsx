@@ -1,14 +1,9 @@
 import type { TeleText as TeleTextType } from "@/types/Yle.types";
 import { isStructuredContent } from "@/utils/Yle";
 import { ReactNode, useEffect, useState } from "react";
+import { FontWrapper } from "./FontWrapper";
 import { StructuredContent } from "./StructuredContent";
 
-type FontWrapperProps = {
-  children: ReactNode
-}
-const FontWrapper = ({ children }: FontWrapperProps) => {
-  return <div className="font-mode7">{children}</div>
-}
 
 type Props = {
   teleText: TeleTextType
