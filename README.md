@@ -34,6 +34,5 @@ $ pnpm start
 
 - Change font (mode7gx3) to support umlauts, maybe just use default monospace font.
 - Charcodes to graphic charcodes (currently are skipped over).
-- Index-page.
 - Animations
 - Support different types of content ("all", "text")
