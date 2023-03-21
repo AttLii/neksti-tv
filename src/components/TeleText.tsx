@@ -21,7 +21,7 @@ export const TeleText = (props: Props) => {
   useEffect(() => {
     let id = setInterval(() => {
       setSubpageIndex(index => index === Number(subpagecount) - 1 ? 0 : index + 1)
-    }, parseInt(time) * 1000)
+    }, Number(time) * 1000)
     return () => clearInterval(id)
   }, [time, subpagecount, setSubpageIndex])
 
