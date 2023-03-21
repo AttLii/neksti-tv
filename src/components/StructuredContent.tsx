@@ -10,7 +10,7 @@ export const StructuredContent = (props: Props) => {
   return (
     <>
       {line.map(({ number, run }) => (
-        <div className="leading-none" key={number}>
+        <div className="leading-none whitespace-nowrap" key={number}>
           {Array.isArray(run) ? (
             <StructuredRun node={run} />
           ) : (
