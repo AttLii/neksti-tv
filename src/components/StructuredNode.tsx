@@ -39,7 +39,8 @@ export const StructuredNode = (props: Props) => {
       ? <DoubleSize>{text}</DoubleSize>
       : text.replace(/ /g, "\u00a0")
   }
+
   return link
-    ? <Link {..._props} href={`/${link}`} />
+    ? <Link {..._props} href={link} />
     : <span {..._props} />
 }
