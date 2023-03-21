@@ -1,6 +1,6 @@
 import type { TeleText as TeleTextType } from "@/types/Yle.types";
 import { isStructuredContent } from "@/utils/Yle";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { StructuredContent } from "./StructuredContent";
 
 type FontWrapperProps = {
@@ -13,13 +13,23 @@ const FontWrapper = ({ children }: FontWrapperProps) => {
 type Props = {
   teleText: TeleTextType
 }
-export const TeleText = ({ teleText }: Props) => {
+export const TeleText = (props: Props) => {
+  const { subpagecount, subpage } = props.teleText.page
+  const [subPageIndex, setSubpageIndex] = useState(0)
+
+  const { content, time } = subpage[subPageIndex]
+  useEffect(() => {
+    let id = setInterval(() => {
+      setSubpageIndex(index => index === Number(subpagecount) - 1 ? 0 : index + 1)
+    }, parseInt(time) * 1000)
+    return () => clearInterval(id)
+  }, [time, subpagecount, setSubpageIndex])
+
   // TODO selector for changing content type
-  const content = teleText.page.subpage[0].content[2]
-  if (isStructuredContent(content)) {
-    return <FontWrapper><StructuredContent content={content} /></FontWrapper>
-  } else {
-    // TODO add more for different types
-    return null;
-  }
+  const c = content[2]
+  return (
+    <FontWrapper>
+      {isStructuredContent(c) ? <StructuredContent content={c} /> : null}
+    </FontWrapper>
+  )
 }
