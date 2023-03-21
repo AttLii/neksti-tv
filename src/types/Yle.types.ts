@@ -21,6 +21,7 @@ export type RunNode = {
   length: string;
   charcode?: string;
   Text?: string;
+  size?: "double height";
 };
 type StructuredLine = {
   number: string;
