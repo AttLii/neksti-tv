@@ -38,3 +38,4 @@ $ pnpm start
 - Animations
 - Support different types of content ("all", "text")
 - Support [double height](https://galax.xyz/TELETEXT/)
+- use link property to navigate to other pages (RunNode type)
