@@ -32,8 +32,9 @@ $ pnpm start
 
 ## TODO
 
-- Change font (mode7gx3) to support umlauts, maybe just use default monospace font.
+- Change font to support umlauts (I wonder what YLE uses [here](https://yle.fi/aihe/tekstitv?P=100).)
 - Charcodes to graphic charcodes (currently are skipped over).
 - Animations
 - Support different types of content ("all", "text")
 - ">>>" links should take you to last subpage
+- fix colors to be more accessible
