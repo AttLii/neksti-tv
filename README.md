@@ -36,3 +36,4 @@ $ pnpm start
 - Charcodes to graphic charcodes (currently are skipped over).
 - Animations
 - Support different types of content ("all", "text")
+- ">>>" links should take you to last subpage
